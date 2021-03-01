@@ -1,12 +1,14 @@
-console.log("hello!");
-
-function greetings(name) {
-  console.log(`Hello Mr. ${name}`);
+function hello(name) {
+  alert(`Hi Mr./Miss ${name}`);
 }
 
-function getUserName(callback) {
-  var name = prompt("enter your name");
-  callback(name);
+function askUserName(callbackFunc) {
+  const a = prompt("Hi can you please tell me your name?");
+  if (a.trim()) {
+    callbackFunc(a);
+  } else {
+    alert("I dont know you!");
+  }
 }
 
-getUserName(greetings);
+askUserName(hello);
